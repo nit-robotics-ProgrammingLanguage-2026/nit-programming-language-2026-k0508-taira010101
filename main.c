@@ -4,6 +4,36 @@ int main(void)
 {
     int n;
     scanf("%d", &n);
-    /* TODO: 課題0508 */
+    if (n < 0)
+    {
+        printf("Error");
+    }
+    else if (n == 0)
+    {
+        printf("No");
+    }
+    else
+    {
+        int matched = 0;
+        if (n % 3 == 0)
+        {
+            printf("Up");
+            matched = 1;
+        }
+        if (n % 5 == 0)
+        {
+            printf("Go");
+            matched = 1;
+        }
+        if (n % 7 == 0)
+        {
+            printf("!!");
+            matched = 1;
+        }
+        if (matched == 0)
+        {
+            printf("No");
+        }
+    }
     return 0;
 }
